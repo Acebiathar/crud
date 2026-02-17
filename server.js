@@ -30,6 +30,10 @@ app.post('/books', (req, res) => {
 
 
 // GET all books
+app.get('/books', (req, res) => {
+    res.json(books);
+}); 
+
 // get books by id
 
 app.get('/', (req, res) => {
