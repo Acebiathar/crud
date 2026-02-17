@@ -35,14 +35,6 @@ app.get('/books', (req, res) => {
 }); 
 
 // get books by id
-app.get('/books/:id', (req, res) => {
-    const bookId = parseInt(req.params.id);
-    const book = books.find(b => b.id === bookId);
-    if (!book) {
-        return res.status(404).json({ message: 'Book not found' });
-    }
-    res.json(book);
-}); 
 
 app.get('/', (req, res) => {
   res.json({ message: 'WELCOME TO MY PARADISE' });
